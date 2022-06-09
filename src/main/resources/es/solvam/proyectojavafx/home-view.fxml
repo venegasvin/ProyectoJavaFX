@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.solvam.proyectojavafx.controlador_vistas.homeController">
+   <children>
+      <AnchorPane prefHeight="89.0" prefWidth="705.0" style="-fx-background-color: #42cbf5;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="90.0" prefWidth="705.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fx:id="imInformacion" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagenes/user.png" />
+                     </image>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fx:id="imGuardar" fitHeight="49.0" fitWidth="46.0" onMouseClicked="#btnGuardarClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagenes/save.png" />
+                     </image>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+                  <ImageView fx:id="imSalir" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#onExitButtonClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagenes/exit.png" />
+                     </image>
+                  </ImageView>
+                  <Separator prefWidth="200.0" visible="false" />
+               </children>
+            </HBox>
+         </children></AnchorPane>
+      <AnchorPane layoutY="98.0" prefHeight="370.0" prefWidth="705.0" style="-fx-background-color: #42cbf5;" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="28.0" layoutY="61.0" text="Información Personal">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="231.0" layoutY="74.0" prefHeight="3.0" prefWidth="447.0" style="-fx-border-color: #000;" />
+            <Label layoutX="28.0" layoutY="105.0" text="DNI" />
+            <Label layoutX="28.0" layoutY="146.0" text="Nombre:" />
+            <Label layoutX="27.0" layoutY="186.0" text="Teléfono:" />
+            <Label layoutX="28.0" layoutY="239.0" text="Fecha de Nacimiento:" />
+            <Label layoutX="375.0" layoutY="239.0" text="Ocupación:" />
+            <Label layoutX="26.0" layoutY="291.0" text="Intereses:" />
+            <TextField fx:id="txtDni" layoutX="98.0" layoutY="101.0" />
+            <TextField fx:id="txtNombre" layoutX="99.0" layoutY="142.0" prefHeight="26.0" prefWidth="379.0" />
+            <TextField fx:id="txtTelefono" layoutX="99.0" layoutY="182.0" />
+            <DatePicker fx:id="dtpFechaNac" layoutX="151.0" layoutY="235.0" />
+            <ComboBox fx:id="cbOcupacion" layoutX="455.0" layoutY="235.0" prefWidth="150.0" />
+            <Label layoutX="290.0" layoutY="186.0" text="Sexo:" />
+            <RadioButton fx:id="rbHombre" layoutX="334.0" layoutY="186.0" mnemonicParsing="false" text="Hombre">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sexo" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbMujer" layoutX="428.0" layoutY="186.0" mnemonicParsing="false" text="Mujer" toggleGroup="$sexo" />
+            <CheckBox fx:id="chTecnologia" layoutX="106.0" layoutY="291.0" mnemonicParsing="false" text="Tecnología" />
+            <CheckBox fx:id="chDiseno" layoutX="231.0" layoutY="291.0" mnemonicParsing="false" text="Diseño" />
+            <CheckBox fx:id="chConsultoria" layoutX="325.0" layoutY="291.0" mnemonicParsing="false" text="Consultoría" />
+            <CheckBox fx:id="chFormacion" layoutX="435.0" layoutY="291.0" mnemonicParsing="false" text="Formación" />
+            <ImageView fx:id="imFoto" fitHeight="127.0" fitWidth="133.0" layoutX="530.0" layoutY="94.0" onMouseClicked="#onImFotoClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/user.png" />
+               </image></ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
